@@ -69,7 +69,9 @@ Ghost poskytuje **16 funkcií na posilnenie Windows** plus **integráciu bezpeč
 ### Hodnotenie bezpečnosti
 ```powershell
 # Načítajte modul Ghost
-IEX(Invoke-WebRequest 'https://raw.githubusercontent.com/jimrtyler/Ghost/main/Ghost.ps1')
+Invoke-WebRequest 'https://raw.githubusercontent.com/jimrtyler/Ghost/main/Ghost.ps1' -OutFile .\Ghost.ps1
+Get-Content .\Ghost.ps1
+. .\Ghost.ps1
 
 # Skontrolujte aktuálny bezpečnostný postoj
 Get-Ghost
@@ -97,7 +99,9 @@ Set-Ghost -SMBv1 -RDP -USBStorage -Intune
 
 ### Možnosť 1: Priame stiahnutie (testovanie)
 ```powershell
-IEX(Invoke-WebRequest 'https://raw.githubusercontent.com/jimrtyler/Ghost/main/Ghost.ps1')
+Invoke-WebRequest 'https://raw.githubusercontent.com/jimrtyler/Ghost/main/Ghost.ps1' -OutFile .\Ghost.ps1
+Get-Content .\Ghost.ps1
+. .\Ghost.ps1
 ```
 
 ### Možnosť 2: Inštalácia modulu
